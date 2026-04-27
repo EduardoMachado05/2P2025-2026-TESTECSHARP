@@ -1,0 +1,20 @@
+﻿@page
+@model InfopaisModel
+@{
+    ViewData["Title"] = "Info País";
+}
+
+<h1>Informação do País: @Model.CodigoPais</h1>
+
+@if (Model.InfoPais != null)
+{
+    <div>
+        <img src="@Model.InfoPais.FlagUrl" alt="Bandeira" width="100" />
+        <p><strong>Nome Oficial:</strong> @Model.InfoPais.OfficialName</p>
+        <p><strong>Código:</strong> @Model.InfoPais.Cca2</p>
+    </div>
+}
+else
+{
+    <p>Erro: País não encontrado.</p>
+}

@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Lista de Países</h1>
+
+@if (Model.Paises?.Count > 0)
+{
+    <div style="display: flex; flex-wrap: wrap; gap: 16px;">
+        @foreach (var pais in Model.Paises)
+        {
+            <div style="border: 1px solid #ddd; border-radius: 8px; margin: 10px; padding: 0; width: 220px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); overflow: hidden; background: #fff;">
+                <div style="background: #f5f5f5; padding: 10px; text-align: center;">
+                    <img src="@pais.FlagUrl" alt="Bandeira de @pais.OfficialName" style="max-width: 100%; height: auto; display: block; margin: 0 auto;" />
+                </div>
+                <div style="padding: 12px;">
+                    <p style="margin: 0 0 8px; font-size: 1rem;"><strong>@pais.OfficialName</strong></p>
+                    <p style="margin: 0 0 12px; color: #555;">Código: @pais.Cca2</p>
+                    <a asp-page="/Infopais" asp-route-cod="@pais.Cca2" style="color: #007bff; text-decoration: none;">Ver Info</a>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>ERRO : não temos lista </p>
+}
