@@ -16,12 +16,17 @@ public class InfoDragonBallModel : PageModel
         _httpClientFactory = httpClientFactory;
     }
 
-    public string? CodigoDragonBall { get; set; }
+public string? CodigoDragonBall { get; set; }
+    public string? name  { get; set; }
+    public string? description { get; set; }
+    public string? image { get; set; }
+    public string? affiliation  { get; set; }
     public Personagem? InfoDragonBall { get; set; }
 
     public async Task OnGetAsync(string cod)
     {
         CodigoDragonBall = cod ?? string.Empty;
+        name = cod ?? string.Empty;
 
         if (string.IsNullOrEmpty(cod))
         {
