@@ -30,6 +30,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/workspaces/2P2025-2026-TESTECSHARP/MyCoreApp/Pages/InfoDragonBall.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5mb0RyYWdvbkJhbGwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/workspaces/2P2025-2026-TESTECSHARP/MyCoreApp/Pages/Infopais.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSW5mb3BhaXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

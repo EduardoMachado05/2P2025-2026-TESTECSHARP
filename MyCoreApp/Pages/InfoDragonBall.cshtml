@@ -1,0 +1,21 @@
+@page
+@model InfoDragonBallModel
+@{
+    
+    ViewData["Title"] = "Info Dragon Ball";
+}
+
+<h1>Informação do Dragon Ball: @Model.CodigoDragonBall</h1>
+
+@if (Model.InfoDragonBall != null)
+{
+    <div>
+        <img src="@Model.InfoDragonBall.image" alt="Imagem" width="100" />
+        <p><strong>Nome:</strong> @Model.InfoDragonBall.name</p>
+        <p><strong>ID:</strong> @Model.InfoDragonBall.id</p>
+    </div>
+}
+else
+{
+    <p>Erro: Personagem não encontrado.</p>
+}
